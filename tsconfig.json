@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "jsx": "react-jsx",
+        "noImplicitReturns": true,
+        "noImplicitAny": true,
+        "sourceMap": true,
+        "outDir": "./dist/",
+        "forceConsistentCasingInFileNames": true,
+        "strict": false,
+        "esModuleInterop": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+    },
+}
