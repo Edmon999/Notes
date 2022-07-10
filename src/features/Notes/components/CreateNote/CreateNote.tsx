@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { toast } from "react-toastify";
 import Loading from "../../../../component/Loading/Loading";
 import { useTypedDispatch, useTypedSelector } from "../../../../store/store";
 import { getTimeZones, saveNote } from "../../action/notes";
@@ -8,11 +7,7 @@ import CreateNoteForm from "./CreateNoteForm/CreateNoteForm";
 
 const CreateNote: React.FC = () => {
   const dispatch = useTypedDispatch();
-  const notify = () => {
-    toast.success("Note Created!", {
-      position: toast.POSITION.BOTTOM_LEFT,
-    });
-  };
+
   const { timeZones, loading } = useTypedSelector((state) => state.notes);
 
   let lastNoteData = {
