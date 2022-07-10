@@ -18,13 +18,20 @@ module.exports = {
     new CleanWebpackPlugin(),
   ],
   resolve: {
-    extensions: [".tsx", ".ts", ".js"],
+    extensions: [".tsx", ".ts", ".js", ".css"],
   },
   module: {
     rules: [
       {
-        test: /\.(css|less)$/,
-        use: ["style-loader", "css-loader", "less-loader"],
+        test: /\.css$/,
+        use: [
+          {
+            loader: "style-loader",
+          },
+          {
+            loader: "css-loader",
+          },
+        ],
       },
       {
         test: /\.tsx?$/,
